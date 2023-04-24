@@ -1,0 +1,125 @@
+.list-wrapper {
+	margin: 0 -16px;
+
+	.list-tasks {
+		min-height: 370px;
+		max-height: 370px;
+		overflow: auto;
+		padding: 0 16px 16px;
+	}
+
+	.list-todo {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		min-height: 40px;
+		padding: 8px 20px;
+		background-color: #fff;
+		border-radius: 5px;
+		box-shadow: 6px 6px 14px rgba(0,0,0,0.2);
+		font-size: 20px;
+		font-weight: 400;
+
+		&:not(:last-child) {
+			margin-bottom: 16px;
+		}
+
+		&.favorite-todo {
+			background-color: #1f7ee0;
+
+		}
+
+		&.completed-todo {
+			background-color: #9ea1a4;
+
+		}
+
+		&.edit {
+			input[type=text] { border: 1px solid #ccc; }
+		}
+
+		input[type=text] {
+			width: 100%;
+			-webkit-appearance: none; /* ← Этот хак нужен сафари для работы (проблема со свойством height)... */
+			height: 42px;
+			padding: 0 14px;
+			margin: 0 16px;
+			border-radius: 4px;
+			border-color: transparent;
+			outline: none;
+			transition: border-color 0.3s ease-in-out;
+			font-size: 20px;
+			text-overflow: ellipsis;
+			background-color: transparent;
+
+			&::placeholder {
+				font-size: 20px;
+				transition: color 0.1s ease-in-out;
+				color: #ccc;
+			}
+
+			&:not(:disabled) {
+				&:hover,
+				&:focus {
+					border-color: #3b8ef3;
+
+					&::placeholder {
+						color: transparent;
+					}
+				}
+			}
+		}
+
+		.svg-icon {
+			width: 20px;
+			fill: currentColor;
+
+			&.icon-favorite {}
+			&.icon-message {}
+			&.icon-remove {
+				width: 16px;
+			}
+
+			&.active {
+				color: #3b8ef3;
+			}
+		}
+
+		.list-actions {
+			display: flex;
+			align-items: center;
+			margin: -8px;
+		}
+
+		.btn-action {
+			position: relative;
+			display: inline-flex;
+			vertical-align: middle;
+			text-align: center;
+			box-sizing: border-box;
+			align-items: center;
+			justify-content: center;
+			text-decoration: none !important;
+			outline: none;
+			-webkit-appearance: none;
+			border: none;
+			padding: 0;
+			margin: 8px;
+			cursor: pointer;
+			user-select: none;
+			background-color: transparent;
+
+			transition: color 0.3s ease-in-out;
+
+			&:hover,
+			&:focus {
+				color: #3b8ef3;
+			}
+
+			&:disabled {
+				pointer-events: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,20 @@
+.dashboard {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: #3995BF;
+	background: -webkit-linear-gradient(top left, #3995BF, #033B64);
+	background: -moz-linear-gradient(top left, #3995BF, #033B64);
+	background: linear-gradient(to bottom right, #3995BF, #033B64);
+
+	.dashboard-container {
+		width: 100%;
+		max-width: 950px;
+		height: 100%;
+		padding: 50px 85px;
+		background-color: #f5f5f5;
+		border-radius: 10px;
+		box-shadow: 6px 6px 14px rgba(0,0,0,0.2);
+	}
+}

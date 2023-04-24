@@ -1,0 +1,20 @@
+.g-header {
+	margin-bottom: 32px;
+
+	h1 {
+		font-size: 32px;
+		font-weight: 700;
+		color: #313b3d;
+		font-family: inherit;
+	}
+
+	p {
+		margin-top: 24px;
+	}
+
+	.header-desc {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
